@@ -17,9 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 # from rest_framework_simplejwt.views import (TokenObtainPairView,TokenRefreshView)
+from django.http import HttpResponse
+
+# Simple home view just for testing on Render
+def home(request):
+    return HttpResponse("✅ EntryCheck is working on Render!")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home),
     path('api/', include('entry.urls')),
     # path('api/token/',TokenObtainPairView.as_view(),name='token_obtain_view'),
     # path('api/token/refresh/',TokenRefreshView.as_view(),name='token_refresh'),
