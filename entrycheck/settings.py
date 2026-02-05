@@ -61,6 +61,7 @@ from corsheaders.defaults import default_headers
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://192.168.0.249:3000",
+    "https://visitorcheckin.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -73,6 +74,7 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://192.168.0.249:3000",
+    "https://visitorcheckin.onrender.com",
 ]
 
 
